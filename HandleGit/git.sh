@@ -5,6 +5,10 @@ echo "initalizing git.sh"
 push_cmd="git push origin"
 add_cmd="git add"
 commit_cmd="git commit"
+clone_cmd="git clone"
+status_cmd="git status"
+log_cmd="git log"
+graph_cmd="git log --graph --oneline"
 
 function push(){
 	if [ -z "$1" ] 
@@ -48,7 +52,23 @@ function dcommit(){
 	$commit_cmd
 }
 
+# for cloning repos
+function clone(){
+	$clone_cmd $1
+}
 
+# status
+function status(){
+	$status_cmd
+}
 
+# log
+function log(){
+	$log_cmd
+}
 
-export push rpush dpush rcommit dcommit
+# graph
+function graph(){
+	$graph_cmd
+}
+export push rpush dpush rcommit dcommit clone status log graph
