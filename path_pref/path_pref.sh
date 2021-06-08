@@ -5,7 +5,7 @@ function alvin(){
 }
 
 function prog(){
-	cd $local_home/program$1
+	cd $local_home/program
 }
 
 function configspace(){
