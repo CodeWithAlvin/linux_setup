@@ -10,6 +10,7 @@ status_cmd="git status"
 log_cmd="git log"
 graph_cmd="git log --graph --oneline"
 
+
 function push(){
 	if [ -z "$1" ] 
 	then
@@ -57,6 +58,10 @@ function clone(){
 	$clone_cmd $1
 }
 
+function nclone(){
+	$clone_cmd https://github.com/codewithalvin/$1
+}
+
 # status
 function status(){
 	$status_cmd
@@ -71,4 +76,4 @@ function log(){
 function graph(){
 	$graph_cmd
 }
-export push rpush dpush rcommit dcommit clone status log graph
+export push rpush dpush rcommit dcommit clone rclone status log graph

@@ -9,7 +9,7 @@ function prog(){
 }
 
 function configspace(){
-	cd ~/../usr/etc/manuals/
+	cd ~/../usr/etc/linux_setup/
 }
 
 export alvin prog configspace
